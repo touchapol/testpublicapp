@@ -9,3 +9,5 @@ Minimal Node.js app for testing NodeCloud deploys. No dependencies.
 ```bash
 npm start
 ```
+
+Deploys automatically on NodeCloud when `main` gets a new commit.
