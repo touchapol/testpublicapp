@@ -13,6 +13,7 @@ http.createServer((req, res) => {
   res.end(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>testpublicapp</title>
 <style>body{font:16px/1.5 system-ui,sans-serif;max-width:640px;margin:48px auto;padding:0 16px}code{background:#eee;padding:2px 6px;border-radius:4px}</style></head>
 <body><h1>testpublicapp is running</h1>
+<p>Environment: <code>${process.env.NODECLOUD_ENV || "local"}</code>, branch <code>${process.env.NODECLOUD_GIT_BRANCH || "-"}</code></p>
 <p>Node <code>${process.version}</code>, started <code>${started.toISOString()}</code>.</p>
 <p>Health check: <a href="/health">/health</a></p></body></html>`);
 }).listen(port, () => console.log(`listening on ${port}`));
